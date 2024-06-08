@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Kumbh_Sans;
+    src: url("./assets/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf");
+}
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --primary-font: Kumbh_Sans, sans-serif
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--primary-font);
+    background-color: var(--Dark-cyan);
+}
+hr{
+    border: none;
+    height: 1px;
+    background-color: var(--Dark-gray);
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 49vw bottom 45vh, left 48vw top 50vh;
+}
+.card {
+    width: 350px;
+    height: 375px;
+    z-index: 100;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+.card__bg {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.card__img {
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+}
+.card__img img{
+    border: 5px solid white;
+    border-radius: inherit;
+}
+.card__content {
+    padding-top: 3rem;
+}
+.card__name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+}
+.card__name span{
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+    padding-left: 5px;
+}
+.card__city{
+    margin-top: 0.75rem;
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+}
+.card__stats__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card__stats {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue)
+}
+.card__stat-name{
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--Dark-gray);
+}
+@media screen and (max-width: 400px) {
+   
+    .card{
+        width: 90%;
+    }
+  
+}
